@@ -1,0 +1,184 @@
+html,
+body {
+    margin: 0;
+    background-color: #000;
+}
+
+/* Homepage */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/audioslave5.jpg);
+    height: 55vw;
+    width: auto;
+    max-width: 100%;
+    background-size: 100vmax;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.nav-link {
+    color: #c0392b;
+    font-family: 'Righteous', cursive;
+}
+
+.bandName {
+    font-size: 4em;
+    margin-left: 35%;
+    margin-right: 60%;
+    padding-top: 20px;
+    color: #c0392b;
+    font-family: 'Righteous', cursive;
+}
+
+/* About page */
+
+#bandMemb {
+    color: #c0392b;
+    font-family: 'Righteous', cursive;
+    margin-top: 50px;
+    font-size: 250%;
+}
+
+.mr-3 {
+    height: auto;
+    width: 20%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.mt-0 {
+    color: #0dccfca8;
+    font-family: 'Righteous', cursive;
+}
+
+.list-unstyled {
+    margin: 35px 0px;
+}
+
+#bioBack {
+    background-image: linear-gradient(#000000, #434343);
+    color: #ecf0f1;
+}
+
+/* music page */
+
+#musicBody {
+    background-image: linear-gradient(#000000, #434343);
+}
+
+.mainMusic {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    vertical-align: center;
+    margin: 15px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-image-top {
+    object-fit: cover;
+    height: 15rem;
+}
+
+.albumRow {
+    object-position: center;
+}
+
+iframe {
+    width: 80%;
+    height: auto;
+}
+
+/* tour page */
+
+#tourMain {
+    height: 65vh;
+}
+
+#tourBody {
+    background-image: linear-gradient(#000000, #434343);
+}
+
+h2 {
+    text-align: center;
+    padding: 25px 0px 25px 0px;
+    color: whitesmoke;
+}
+
+.footer {
+    position: bottom;
+    margin: 20px 0px 20px 0px;
+    background: whitesmoke;
+    color: whitesmoke;
+  
+}
+
+#tourNav {
+    background: white;
+    position: fixed;
+}
+
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+
+
+
+/* Video background styling */
+
+/* Style the video: 100% width and height to cover the entire window */
+
+#liveFootage {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+/* Add some content at the bottom of the video/page */
+
+.content {
+    position: fixed;
+    bottom: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    color: #f1f1f1;
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+}
+
+/* responsive queries */
+
+/*homepage*/
+
+@media only screen and (max-width: 620px) {
+    .bandName {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .bandName {
+        font-size: 2em;
+    }
+}
