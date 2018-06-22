@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <!-- javascript sheet link-->
+    <script src="js/jquery.js"></script>
     <!--google fonts API-->
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <meta charset="UTF-8">
@@ -24,12 +26,15 @@
 </head>
 
 <body>
-    <section id="tourBody">
 
 
+
+    <div class="container mainPage">
         <div class="container" id="tourMain">
-
-            <ul class="nav justify-content-center nav-pills">
+            <video autoplay muted loop id="liveFootage">
+                <source src="video/Untitled.m4v" type="video/mp4">
+            </video>
+            <ul class="nav no-gutters justify-content-center nav-pills" id="tourNav">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
@@ -44,75 +49,136 @@
                 </li>
             </ul>
         </div>
-        <div class="container">
-            
-            <video autoplay muted loop id="liveFootage">
-                <source src="video/Untitled.m4v" type="video/mp4">
-            </video>
 
-            <!-- content overlay of video-->
-            <div class="content">
-                <button id="myBtn" onclick="myFunction()">Pause</button>
-                <h1>Upcoming Tour dates</h1>
-                <p>Insert Table here</p>
-                <!-- Use a button to pause/play the video with JavaScript -->
 
-            </div>
-        </div>
-        <script>
-            // Get the video
-            var video = document.getElementById("liveFootage");
 
-            // Get the button
-            var btn = document.getElementById("myBtn");
-
-            // super simple function to Pause and play the video, and change the button text 
-            function myFunction() {
-                if (video.paused) {
-                    video.play();
-                    btn.innerHTML = "Pause";
-                } else {
-                    video.pause();
-                    btn.innerHTML = "Play";
-                }
-            }
-        </script>
-        </div>
-    </section>
-    <div class="container footer">
-        <h2>Sign up for the most recent tour information!</h2>
-        <form>
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                </div>
-            </div>
-
-            </fieldset>
-            <div class="form-group row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-10">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck1">
-                        <label class="form-check-label" for="gridCheck1">
-                            By checking this, you agree to give us your password
-                        </label>
+        <!-- content overlay of video-->
+        <div class="content">
+            <button id="myBtn" onclick="myFunction()">Pause Video</button>
+            <h1>Upcoming Tour dates</h1>
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Venue</th>
+                        <th scope="col">Purchase</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">June 30, 2018</th>
+                        <td>Vancouver</td>
+                        <td>Queen Elizabeth Theatre</td>
+                        <td>
+                            <a class="btn btn-danger" href="#" role="button">Sold out!</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">July 4, 2018</th>
+                        <td>Vancouver</td>
+                        <td>Queen Elizabeth Theatre</td>
+                        <td>
+                            <a class="btn btn-danger" href="#" role="button">Sold out!</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">July 15, 2018</th>
+                        <td>Vancouver</td>
+                        <td>Queen Elizabeth Theatre</td>
+                        <td>
+                            <a class="btn btn-success" href="https://www.secureboxoffice.com/V/v-1377?mkwid=s|pcrid|272525132150|pkw|queen%20elizabeth%20theatre%20-%20vancouver%20vancouver|pmt|b|pdv|c|&st-t=google&vt-k=queen%20elizabeth%20theatre%20-%20vancouver%20vancouver&gclid=EAIaIQobChMI9pj1zuzl2wIVhsJkCh0-8g8cEAAYBCAAEgLtPPD_BwE"
+                                target="blank" role="button">BUY</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">July 20, 2018</th>
+                        <td>Vancouver</td>
+                        <td>Queen Elizabeth Theatre</td>
+                        <td>
+                            <a class="btn btn-success" href="https://www.secureboxoffice.com/V/v-1377?mkwid=s|pcrid|272525132150|pkw|queen%20elizabeth%20theatre%20-%20vancouver%20vancouver|pmt|b|pdv|c|&st-t=google&vt-k=queen%20elizabeth%20theatre%20-%20vancouver%20vancouver&gclid=EAIaIQobChMI9pj1zuzl2wIVhsJkCh0-8g8cEAAYBCAAEgLtPPD_BwE"
+                                target="blank" role="button">BUY</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">July 29, 2018</th>
+                        <td>Vancouver</td>
+                        <td>Queen Elizabeth Theatre</td>
+                        <td>
+                            <a class="btn btn-success" href="https://www.secureboxoffice.com/V/v-1377?mkwid=s|pcrid|272525132150|pkw|queen%20elizabeth%20theatre%20-%20vancouver%20vancouver|pmt|b|pdv|c|&st-t=google&vt-k=queen%20elizabeth%20theatre%20-%20vancouver%20vancouver&gclid=EAIaIQobChMI9pj1zuzl2wIVhsJkCh0-8g8cEAAYBCAAEgLtPPD_BwE"
+                                target="blank" role="button">BUY</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">August 01, 2018</th>
+                        <td>Vancouver</td>
+                        <td>Queen Elizabeth Theatre</td>
+                        <td>
+                            <a class="btn btn-success" href="https://www.secureboxoffice.com/V/v-1377?mkwid=s|pcrid|272525132150|pkw|queen%20elizabeth%20theatre%20-%20vancouver%20vancouver|pmt|b|pdv|c|&st-t=google&vt-k=queen%20elizabeth%20theatre%20-%20vancouver%20vancouver&gclid=EAIaIQobChMI9pj1zuzl2wIVhsJkCh0-8g8cEAAYBCAAEgLtPPD_BwE"
+                                target="blank" role="button">BUY</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Sign up for the most recent tour information!</h2>
+            <form>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
                     </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    </div>
                 </div>
-            </div>
-        </form>
+
+                </fieldset>
+                <div class="form-group row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                            <label class="form-check-label" for="gridCheck1">
+                                By checking this, you agree to give us your password
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-success">Sign up!</button>
+                    </div>
+                </div>
+            </form>
+            <!-- Use a button to pause/play the video with JavaScript -->
+
+        </div>
+
+    </div>
+    <script>
+        // Get the video
+        var video = document.getElementById("liveFootage");
+
+        // Get the button
+        var btn = document.getElementById("myBtn");
+
+        // super simple function to Pause and play the video, and change the button text 
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+
+        
+    </script>
+    </div>
 
     </div>
 
