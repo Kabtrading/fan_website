@@ -7,13 +7,13 @@ body {
 /* Homepage */
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/audioslave5.jpg);
-    height: 55vw;
-    width: auto;
-    max-width: 100%;
-    background-size: 100vmax;
-    background-position: top;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/homebackground.jpg);
+    min-height: 100%;
+    position: fixed;
+    min-width: 100%;
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .nav-link {
@@ -22,9 +22,9 @@ header {
 }
 
 .bandName {
-    font-size: 5em;
-    margin-left: 33%;
-    margin-right: 62%;
+    font-size: 4em;
+    margin-left: 10%;
+    margin-right: 80%;
     padding-top: 20px;
     color: #c0392b;
     font-family: 'Righteous', cursive;
@@ -49,8 +49,13 @@ h1 {
 }
 
 .mt-0 {
-    color: #0dccfca8;
+    color: #fff;
     font-family: 'Righteous', cursive;
+}
+
+.media-body {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
 }
 
 .list-unstyled {
@@ -58,47 +63,38 @@ h1 {
 }
 
 #bioBack {
-    background-image: linear-gradient(#000000, #434343);
-    color: #ecf0f1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/audioslave5.jpg);
+    color: #fff;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* music page */
 
 #musicBody {
-    background-image: linear-gradient(#000000, #434343);
+    background-image: url(../img/bioback.jpeg);
+    background-attachment: fixed;
+    width: 100%;
 }
 
 .spotify {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 20%;
-    height: 100%;
-
-
-}
-
-.mainMusic {
-    max-width: 1100px;
     margin: auto;
-}
-
-.card {
-    vertical-align: center;
-    margin: 15px;
+    width: 50%;
 }
 
 .card-body {
     text-align: center;
 }
 
-.card-image-top {
-    object-fit: cover;
-    height: 15rem;
+.card {
+    margin: 10px;
 }
 
-.albumRow {
-    object-position: center;
+.albumCards {
+    margin-top: 10%;
 }
 
 iframe {
@@ -137,8 +133,6 @@ h2 {
 }
 
 /* Video background styling */
-
-/* Style the video: 100% width and height to cover the entire window */
 
 #liveFootage {
     position: fixed;

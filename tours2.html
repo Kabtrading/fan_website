@@ -5,13 +5,13 @@
     <!-- javascript sheet link-->
     <script src="js/jquery.js"></script>
     <!--google fonts API-->
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet" />
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/homestyle.css">
+    <link rel="stylesheet" type="text/css" href="css/tours.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Latest compiled and minified bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -26,33 +26,29 @@
 </head>
 
 <body>
-
-
-
-    <div class="container mainPage">
-        <div class="container" id="tourMain">
-            <video autoplay muted loop id="liveFootage">
-                <source src="video/Untitled.m4v" type="video/mp4">
-            </video>
-            <ul class="nav no-gutters justify-content-center nav-pills" id="tourNav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="music.html">Music</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active bg-info" href="tours.html">Tours</a>
-                </li>
-            </ul>
+    <section class="tourMain">
+        <video autoplay muted loop id="liveFootage">
+            <source src="video/Untitled.m4v" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="row justify-content-center nav-pills">
+                <!-- navigation links -->
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="music.html">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  active bg-info" href="tours2.html">Tours</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-
-
-        <!-- content overlay of video-->
         <div class="container content">
             <button id="myBtn" onclick="myFunction()">Pause Video</button>
             <h1>Upcoming Tour dates</h1>
@@ -120,52 +116,56 @@
                     </tr>
                 </tbody>
             </table>
-            <h2>Sign up for the most recent tour information!</h2>
-            <form>
-                <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label"></label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                    </div>
-                </div>
+            <h2>Scroll down to sign up!</h2>
+            <div class="arrow bounce">
 
-                </fieldset>
-                <div class="form-group row">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-10">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck1">
-                            <label class="form-check-label" for="gridCheck1">
-                                By checking this, you agree to give us your password
-                            </label>
-                        </div>
+
+            </div>
+    </section>
+    <section class="form" id="bottom">
+        <form>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            By checking this, you agree to give us your password
+                        </label>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-success">Sign up!</button>
-                    </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-success">Sign up!</button>
                 </div>
-            </form>
-            <!-- Use a button to pause/play the video with JavaScript -->
+            </div>
+        </form>
+    </section>
 
-        </div>
 
-    </div>
     <script>
-        // Get the video
+        // define video into "video variable"
         var video = document.getElementById("liveFootage");
 
-        // Get the button
+        // Get the button var into btn
         var btn = document.getElementById("myBtn");
 
-        // super simple function to Pause and play the video, and change the button text 
+        // Pause and play the video, and change the button text 
         function myFunction() {
             if (video.paused) {
                 video.play();
@@ -175,19 +175,7 @@
                 btn.innerHTML = "Play";
             }
         }
-
-        
     </script>
-    </div>
-
-    </div>
-
-
-
-
-
-
-
 </body>
 
 </html>
